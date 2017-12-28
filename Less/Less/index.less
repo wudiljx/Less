@@ -1,0 +1,64 @@
+@charset "utf-8";
+@import "common";
+
+.reset();
+//整个主体的宽度
+@body_width : 800px;
+//导航的高度
+@nav_height : 32px;
+//头部字体和边框的颜色
+@header_color : #B5B5B5;
+//边框颜色
+@bordr_color : #EDEDED;
+//字体的左右边距
+@text_padding : 0 6px;
+//导航字体的样式
+.nav_txt_style(){
+	.fl();
+	padding: @text_padding;
+	color: @header_color;
+	a{
+		.pointer();
+		font-size: 14px;
+		color: @header_color;
+	}
+}
+
+
+.background_color(){
+	background-color : #F7F7F7;
+}
+
+body{
+	.background_color();
+}
+// 外层
+.body_box{
+	width: 100%;
+	height: auto;
+}
+
+// 导航
+.nav_box{
+	width: 100%;
+	height: @nav_height;
+	line-height: @nav_height;
+	border-bottom: 1px solid @bordr_color;
+}
+
+.nav_box_in{
+	width: @body_width;
+	.margin();
+}
+.nav_l{
+	.fl();
+	li{
+		.nav_txt_style();
+	}
+}
+.nav_r{
+	.fr();
+	li{
+		.nav_txt_style();
+	}
+}
