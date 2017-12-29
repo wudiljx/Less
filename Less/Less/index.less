@@ -6,6 +6,8 @@
 @body_width : 800px;
 //导航的高度
 @nav_height : 32px;
+// 头部高度
+@header_height : 300px;
 //头部字体和边框的颜色
 @header_color : #B5B5B5;
 //边框颜色
@@ -24,7 +26,7 @@
 	}
 }
 
-
+//背景颜色
 .background_color(){
 	background-color : #F7F7F7;
 }
@@ -32,33 +34,50 @@
 body{
 	.background_color();
 }
-// 外层
-.body_box{
+// 宽外层
+.width_box{
 	width: 100%;
 	height: auto;
 }
 
-// 导航
+// ************************** 导航区域样式开始
 .nav_box{
 	width: 100%;
 	height: @nav_height;
 	line-height: @nav_height;
 	border-bottom: 1px solid @bordr_color;
 }
-
-.nav_box_in{
+// 内容区域的宽度
+.content_box{
 	width: @body_width;
 	.margin();
 }
+// 导航区左侧部分
 .nav_l{
 	.fl();
 	li{
 		.nav_txt_style();
 	}
 }
+// 导航区右侧部分
 .nav_r{
 	.fr();
 	li{
 		.nav_txt_style();
 	}
 }
+
+// **************  头部样式开始
+
+.header_box{
+	width: 100%;
+	height : @header_height;
+	background-image: url(../image/background.jpg);
+}
+
+
+
+
+
+
+
