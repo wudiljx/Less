@@ -5,13 +5,13 @@
 //整个主体的宽度
 @body_width : 800px;
 //导航的高度
-@nav_height : 32px;
+@nav_height : 42px;
 // 头部高度
 @header_height : 300px;
 //头部字体和边框的颜色
-@header_color : #B5B5B5;
+@header_color : #DFF7FE;
 //边框颜色
-@bordr_color : #EDEDED;
+@bordr_color : #1A7E79;
 //字体的左右边距
 @text_padding : 0 6px;
 //导航字体的样式
@@ -28,7 +28,7 @@
 
 //背景颜色
 .background_color(){
-	background-color : #F7F7F7;
+	background-color : #38a39e;
 }
 
 body{
@@ -67,15 +67,36 @@ body{
 	}
 }
 
+.logo_box{
+	height: @nav_height;
+	line-height: @nav_height;
+	overflow: hidden;
+	img{
+		height: @nav_height;
+		line-height: @nav_height;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
 // **************  头部样式开始
 
 .header_box{
 	width: 100%;
 	height : @header_height;
-	background-image: url(../image/background.jpg);
 }
 
-
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
 
 
 

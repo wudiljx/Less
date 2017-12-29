@@ -5,18 +5,15 @@
 	<title>Less的学习(新年心愿)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="Less/index.css">
-	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous">
-	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
 	<!-- 整个外层 -->
-	<div class="width_box">
+	<div class="width_box" id="app">
 		<!-- 导航 -->
 		<div class="nav_box">
 			<div class="content_box">
-				<ul class="nav_l">
+				<!-- <ul class="nav_l">
 					<li><a href="index.html">欢迎来到新年心愿</a></li>
 					<li>
 						<ul>
@@ -31,13 +28,17 @@
 					<li><a>下载</a></li>
 					<li><a>导航</a></li>
 					<li><a>签到</a></li>
-				</ul>
+				</ul> -->
+				<div class="logo_box" @click="show = !show">
+					<img src="image/logo.png" alt="" name="slide-fade" v-if="show">
+				</div>
 			</div>
 		</div>
 		<!-- 头部 -->
 		<div class="header_box">
-			<div class="content_box">
-				头部
+			<div class="content_box" v>
+				{{txt}}
+				
 			</div>
 		</div>
 		<!-- 主体 -->
@@ -49,5 +50,8 @@
 			footer
 		</div>
 	</div>
+
+	<script src="vue/vue.min.js"></script>
+	<script src="js/index.js"></script>
 </body>
 </html>
